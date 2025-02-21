@@ -6,16 +6,17 @@ import { useRouter } from "next/navigation";
 import { Trash2, Clipboard, ShoppingCart, ArrowLeft } from "lucide-react";
 import toast from "react-hot-toast"; // Import toast
 
-interface ChallengeProps {
-  numDomainsRequired: number;
-}
+// interface ChallengeProps {
+//   numDomainsRequired: number;
+// }
 
 interface Domain {
   name: string;
   available: boolean | null;
 }
 
-export default function Challenge({ numDomainsRequired }: ChallengeProps) {
+export default function Challenge() {
+  const numDomainsRequired = 5; // Default value or fetch from context
   const { cart, removeFromCart, clearCart } = useCart();
   const [updatedCart, setUpdatedCart] = useState<Domain[]>([]);
   const router = useRouter();
