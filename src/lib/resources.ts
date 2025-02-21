@@ -1,5 +1,4 @@
-// src/lib/resources.ts
-export const isDomainAvailable = (domain: string): Promise<boolean> => {
+export const isDomainAvailable = (_domain: string): Promise<boolean> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(Math.random() > 0.5); // Randomly return true or false for availability
@@ -8,7 +7,7 @@ export const isDomainAvailable = (domain: string): Promise<boolean> => {
 };
 
 // Validate domain and ensure it ends with .com, .app, or .xyz
-export const validateDomain = (domain: string): boolean => {
+export const validateDomain = (_domain: string): boolean => {
   const regex = /^[a-z0-9-]+\.(com|xyz|app)$/i;
-  return regex.test(domain);
+  return regex.test(_domain);
 };
