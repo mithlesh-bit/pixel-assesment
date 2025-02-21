@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useCart } from "../context/CartContext";
 import { isDomainAvailable, validateDomain } from "../lib/resources";
-import { Domain } from "../types/domain";
+// import { Domain } from "../types/domain";
 import { Button, Input, VStack, Text, Box, HStack } from "@chakra-ui/react";
 
 interface ChallengeProps {
